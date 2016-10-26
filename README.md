@@ -38,10 +38,15 @@ You should see a JSON response of this form:
 	{“luminance”: 00, “id”: “1”, name: “front-light-sensor”, “connected”: true}
 	
 where	"luminance" is the variable name
+
 		00 will be the actual value (in lux) of the light measured by the sensor
+
 		"id" corresponds to the ID of the device
+
 		"1" will be whatever value you gave it in the program (e.g. rest.set_id("1"))
+
 		name is the name of the device
+
 		"front-light-sensor" will be whatever name you gave it in the program (e.g. rest.set_name("front-light-sensor"))
 
 It's also possible to find out what the value of the supply voltage is (in case you decide to run it on a battery)
@@ -50,4 +55,5 @@ It's also possible to find out what the value of the supply voltage is (in case 
 
 NOTE: At this time, there is a bug in aREST, such that sending the URI with a browser will crash the program. The reason appears to be related to the amount of header information that is sent back by the browser. I have had no problems using libcurl in my programs or curl from the command line (see https://curl.haxx.se/).
 Command line example:
+
 	curl http://IP.Address.Of.Sensor/luminance
