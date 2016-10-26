@@ -12,14 +12,23 @@ Software Used (Note: Versions may have changed)
 - aREST library, which implements a REST API for Arduino & the ESP8266 WiFi chip (see https://github.com/marcoschwartz/aREST)
 
 Work Flow
+
 1. Install the development environment
+
 2. Install the TSL2561 libraries and the aREST library
+
 3. Change the OTALightSensor.ino file accordingly. I strongly suggest these:
+
    a. "your_ssid" to your wifi ssid
+
    b. "your_password" to your wifi password
+
    c. "front-light-sensor" to a name that makes sense for you sensor location
+
 4. Wire up the ESP8266 module and the sensor. The components I used require 3.3 volts and do not tolerate 5 volts. It's possible to find modules that can run safely at voltages higher than 3.3 volts, I didn't use them. Be careful.
+
 5. Program the ESP8266 module. I highly recommend not having the light sensor module connected during programming. My components are mounted in sockets, so I can do that easily. Further, socket mounting these components is a good practice.
+
 6. Reset the ESP8266 and it should run the program. If you send it a URI of this form:
 
 	http://IP.Address.Of.Sensor/luminance
