@@ -37,7 +37,9 @@ You should see a JSON response of this form:
 
 	{“luminance”: 00, “id”: “1”, name: “front-light-sensor”, “connected”: true}
 	
-where	"luminance" is the variable name
+where
+
+        "luminance" is the variable name
 
 		00 will be the actual value (in lux) of the light measured by the sensor
 
